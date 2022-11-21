@@ -1,0 +1,94 @@
+
+  .form-container {
+    
+    input[type=text], input[type=email], input[type=phone], input[type=number], textarea {
+      width: 90%; 
+    }
+    
+    .button-group {
+      width: 0%;
+      margin: 0 auto 10px auto;
+      position: relative;
+      left: 15%;
+    }
+    .btn-group {
+        width: 0%;
+        margin: 0 auto 10px auto;
+       
+      
+      }
+    .back {
+      float: right;
+      
+    }
+    .back2{
+        margin-right: 0px;
+        font-size: 20px;
+        color: rgb(0, 89, 255);
+        display: flex;
+        
+    }
+   
+    .continue {
+      float: right;
+      background-color: rgb(255, 243, 134);
+      border-radius: 15px;
+      padding: 0 30px;
+    }
+    .continue:hover {
+        float: right;
+        transition: 0.1s ease;
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 204, 0);
+        border-radius: 15px;
+      }
+  }
+
+  /* Multi-Part CSS */
+  input[type=checkbox] {
+    position: absolute;
+    /* Position the checkbox in upper left corner */
+    
+    opacity: 0;
+  }
+  
+  /* Styling Parts */
+  #part1,
+  #part2,
+  #part3 {
+    z-index: 2;
+    display: block;
+    height: auto;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Hidden Parts */
+  #part2,
+  #part3 {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  /* Show Step 2 & Hide Step 1 */
+  #step2:checked ~ #part2 {
+    opacity: 1;
+    height: auto;
+  }
+  #step2:checked ~ #part1 {
+    opacity: 0;
+    height: 0;
+    display: none;
+  }
+  
+  /* Show Step 3  & Hide Step 2 */
+  #step3:checked ~ #part3 {
+    opacity: 1;
+    height: auto;
+  }
+  #step3:checked ~ #part2 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
